@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>RaffleMaster - Rifa Premium 19/12/2025</title>
+    <title>RaffleMaster - Rifa Premium Pollo Relleno</title>
     <link href="https://fonts.googleapis.com" rel="preconnect"/>
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
@@ -32,6 +32,13 @@
         ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.5); }
         ::-webkit-scrollbar-thumb { background: rgba(19, 236, 109, 0.2); border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: rgba(19, 236, 109, 0.4); }
+
+        /* Estilos base para permitir scroll */
+        body {
+            overflow-y: auto !important;
+            height: auto !important;
+            min-height: 100vh;
+        }
 
         .glass-panel {
             background: rgba(30, 41, 59, 0.4);
@@ -101,7 +108,7 @@
         }
     </style>
 </head>
-<body class="bg-background-dark text-white font-display min-h-screen flex flex-col overflow-hidden">
+<body class="bg-background-dark text-white font-display flex flex-col">
 
 <header class="glass-panel sticky top-0 z-50 w-full border-b border-white/5">
     <div class="px-6 py-3 flex items-center justify-between">
@@ -128,21 +135,21 @@
     </div>
 </header>
 
-<main class="flex-1 flex flex-col lg:flex-row h-[calc(100vh-64px)] overflow-hidden">
-    <!-- Sidebar Izquierda -->
-    <aside class="w-full lg:w-[360px] flex-shrink-0 p-6 overflow-y-auto lg:border-r border-white/5 bg-slate-900/30">
-        <div class="flex flex-col gap-6">
+<main class="flex-1 flex flex-col lg:flex-row min-h-[calc(100vh-64px)]">
+    <!-- Sidebar Izquierda (Información) -->
+    <aside class="w-full lg:w-[360px] flex-shrink-0 p-6 lg:border-r border-white/5 bg-slate-900/30">
+        <div class="flex flex-col gap-6 sticky top-24">
             <!-- Tarjeta de Premio -->
             <div class="glass-panel rounded-xl overflow-hidden p-1 group">
                 <div class="relative h-48 w-full rounded-lg overflow-hidden">
-                    <img id="prize-img" src="image_8e7383.png" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Premio Mayor">
+                    <img id="prize-img" src="https://raw.githubusercontent.com/jimbogc/Rifa/refs/heads/main/unnamed.jpg" onerror="this.src='https://via.placeholder.com/400x300?text=Pollo+Relleno'" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Premio Mayor: Pollo Relleno">
                     <div class="absolute top-3 right-3 bg-black/60 backdrop-blur-md text-primary font-bold px-3 py-1 rounded-full text-xs border border-primary/20">
-                        #SORTEO_ESPECIAL_2025
+                        #GRAN_PREMIO
                     </div>
                 </div>
                 <div class="p-4 text-center lg:text-left">
-                    <h2 class="text-2xl font-bold leading-tight mb-1">¡Gran Premio de Hoy!</h2>
-                    <p class="text-white/60 text-sm mb-4">Participa por nuestro premio mayor de fin de año.</p>
+                    <h2 class="text-2xl font-bold leading-tight mb-1">¡Gran Pollo Relleno!</h2>
+                    <p class="text-white/60 text-sm mb-4">¡Participa por este delicioso premio!</p>
                     <div class="flex items-end justify-between mb-4 bg-white/5 p-3 rounded-xl border border-white/5">
                         <div>
                             <p class="text-[10px] text-white/40 uppercase tracking-widest font-bold">Valor Boleta</p>
@@ -160,22 +167,22 @@
             <div class="glass-panel rounded-xl p-5 border-l-4 border-l-amber-500 bg-amber-500/5">
                 <h3 class="text-sm font-bold text-white mb-4 flex items-center gap-2">
                     <span class="material-symbols-outlined text-amber-500 text-base">location_on</span>
-                    Lugar del Sorteo
+                    Detalles del Evento
                 </h3>
                 <div class="space-y-3">
                     <div class="flex items-start gap-3">
-                        <span class="material-symbols-outlined text-white/30 text-sm mt-1">schedule</span>
+                        <span class="material-symbols-outlined text-white/30 text-sm mt-1">calendar_month</span>
                         <div>
-                            <p class="text-[11px] font-bold text-white/60 uppercase">Hora de Inicio</p>
-                            <p class="text-sm font-black text-white">09:00 PM</p>
+                            <p class="text-[11px] font-bold text-white/60 uppercase">Fecha y Hora</p>
+                            <p class="text-sm font-black text-white">19 Dic 2025 - 09:00 PM</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-3">
                         <span class="material-symbols-outlined text-white/30 text-sm mt-1">map</span>
                         <div>
-                            <p class="text-[11px] font-bold text-white/60 uppercase">Dirección</p>
+                            <p class="text-[11px] font-bold text-white/60 uppercase">Ubicación</p>
                             <p class="text-sm font-black text-white leading-tight">Carrera 23C # 32A Sur 25</p>
-                            <p class="text-[11px] font-bold text-amber-500 italic">Barrio Quiroga, Bogotá</p>
+                            <p class="text-[11px] font-bold text-amber-500 italic">Barrio Quiroga</p>
                         </div>
                     </div>
                 </div>
@@ -187,7 +194,6 @@
                     <span class="material-symbols-outlined text-primary text-base">analytics</span>
                     Estado de la Rifa
                 </h3>
-                
                 <div class="grid grid-cols-2 gap-4 mb-6">
                     <div class="bg-white/5 rounded-lg p-3 border border-white/5 text-center">
                         <p class="text-[10px] text-white/40 uppercase font-bold tracking-tighter">Vendidos</p>
@@ -198,25 +204,22 @@
                         <p id="stat-available" class="text-xl font-black text-primary">100</p>
                     </div>
                 </div>
-
-                <div class="space-y-4">
-                    <div>
-                        <div class="flex justify-between text-[10px] mb-2 font-bold uppercase text-white/50 tracking-widest">
-                            <span>Ocupación de Tablero</span>
-                            <span id="stat-percentage">0%</span>
-                        </div>
-                        <div class="h-3 w-full bg-slate-800 rounded-full overflow-hidden border border-white/5 p-0.5">
-                            <div id="progress-bar" class="h-full bg-gradient-to-r from-green-600 to-primary w-[0%] rounded-full transition-all duration-1000"></div>
-                        </div>
+                <div>
+                    <div class="flex justify-between text-[10px] mb-2 font-bold uppercase text-white/50 tracking-widest">
+                        <span>Ocupación</span>
+                        <span id="stat-percentage">0%</span>
+                    </div>
+                    <div class="h-3 w-full bg-slate-800 rounded-full overflow-hidden border border-white/5 p-0.5">
+                        <div id="progress-bar" class="h-full bg-gradient-to-r from-green-600 to-primary w-[0%] rounded-full transition-all duration-1000"></div>
                     </div>
                 </div>
             </div>
         </div>
     </aside>
 
-    <!-- Sección Central -->
-    <section class="flex-1 flex flex-col relative bg-slate-950">
-        <div class="px-6 py-4 border-b border-white/5 flex flex-wrap items-center justify-between gap-4 bg-slate-900/50">
+    <!-- Sección Central (Tablero) -->
+    <section class="flex-1 flex flex-col bg-slate-950">
+        <div class="px-6 py-4 border-b border-white/5 flex flex-wrap items-center justify-between gap-4 bg-slate-900/50 sticky top-14 z-40">
             <h2 class="text-xs font-black uppercase tracking-[0.2em] text-white/30">Tablero de Selección</h2>
             <div class="flex items-center gap-5 text-[10px] font-black uppercase tracking-wider">
                 <div class="flex items-center gap-2">
@@ -224,78 +227,75 @@
                     <span class="text-white/40">Libre</span>
                 </div>
                 <div class="flex items-center gap-2">
-                    <div class="size-3 rounded-sm bg-primary shadow-[0_0_10px_rgba(19,236,109,0.8)]"></div>
-                    <span class="text-primary">Tu Boleta</span>
+                    <div class="size-3 rounded-sm bg-primary"></div>
+                    <span class="text-primary">Tuyo</span>
                 </div>
                 <div class="flex items-center gap-2">
-                    <div class="size-3 rounded-sm bg-red-600 shadow-[0_0_10px_rgba(239,68,68,0.5)]"></div>
-                    <span class="text-red-500/60">Pagado</span>
+                    <div class="size-3 rounded-sm bg-red-600"></div>
+                    <span class="text-red-500/60">Vendido</span>
                 </div>
             </div>
         </div>
 
-        <div class="flex-1 overflow-y-auto p-4 md:p-12 flex items-center justify-center">
+        <div class="p-4 md:p-12 flex items-center justify-center min-h-[500px]">
             <div class="w-full max-w-[650px] aspect-square">
-                <div id="grid-container" class="grid grid-cols-10 grid-rows-10 gap-2 sm:gap-3 h-full w-full">
+                <div id="grid-container" class="grid grid-cols-10 grid-rows-10 gap-1.5 sm:gap-3 h-full w-full">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Sidebar Derecha (Carrito) -->
-    <aside class="w-full lg:w-[320px] bg-slate-900 border-l border-white/10 flex flex-col relative z-20 shadow-2xl">
-        <div id="user-cart-view" class="flex flex-col h-full">
+    <aside class="w-full lg:w-[320px] bg-slate-900 border-l border-white/10 flex flex-col shadow-2xl">
+        <div id="user-cart-view" class="flex flex-col h-full sticky top-14 lg:h-[calc(100vh-64px)]">
             <div class="p-6 border-b border-white/5 flex items-center justify-between bg-slate-800/30">
-                <h2 class="text-lg font-black italic">MI CARRITO</h2>
+                <h2 class="text-lg font-black italic">MI PEDIDO</h2>
                 <span id="cart-count" class="bg-primary text-black px-2 py-0.5 rounded-full text-[10px] font-black">0</span>
             </div>
             
-            <div id="cart-items" class="flex-1 overflow-y-auto p-4 space-y-3 bg-gradient-to-b from-slate-900 to-slate-950">
-                <div class="text-center py-20">
-                    <span class="material-symbols-outlined text-white/5 text-6xl mb-4">shopping_cart</span>
-                    <p class="text-white/20 italic text-sm">Selecciona números del tablero</p>
+            <div id="cart-items" class="flex-1 overflow-y-auto p-4 space-y-3 bg-gradient-to-b from-slate-900 to-slate-950 min-h-[200px]">
+                <div class="text-center py-10">
+                    <span class="material-symbols-outlined text-white/5 text-5xl mb-4">shopping_cart</span>
+                    <p class="text-white/20 italic text-sm">Selecciona números</p>
                 </div>
             </div>
 
             <div class="p-6 bg-slate-950 border-t border-white/10">
                 <div class="flex justify-between items-end mb-6">
                     <div>
-                        <p class="text-[10px] text-white/40 uppercase font-black tracking-widest">Inversión Total</p>
+                        <p class="text-[10px] text-white/40 uppercase font-black tracking-widest">Total</p>
                         <p id="total-price" class="text-4xl font-black text-white">$0</p>
                     </div>
                 </div>
-                <button onclick="sendToWhatsApp()" class="w-full py-5 bg-primary hover:bg-[#0fd660] text-black font-black text-lg rounded-xl shadow-[0_0_30px_rgba(19,236,109,0.4)] transition-all active:scale-[0.95] flex items-center justify-center gap-3">
+                <button onclick="sendToWhatsApp()" class="w-full py-5 bg-primary hover:bg-[#0fd660] text-black font-black text-lg rounded-xl shadow-[0_0_30px_rgba(19,236,109,0.2)] transition-all active:scale-[0.95] flex items-center justify-center gap-3">
                     COMPRAR AHORA
-                    <span class="material-symbols-outlined font-black">arrow_forward</span>
+                    <span class="material-symbols-outlined font-black">send</span>
                 </button>
             </div>
         </div>
 
         <!-- Vista Admin -->
-        <div id="admin-controls-view" class="hidden flex flex-col h-full bg-slate-900">
+        <div id="admin-controls-view" class="hidden flex-col h-full sticky top-14 lg:h-[calc(100vh-64px)] bg-slate-900">
             <div class="p-6 border-b border-blue-500/50 bg-blue-600/20 flex items-center justify-between">
-                <h2 class="text-lg font-black text-blue-400 italic leading-none">GESTOR</h2>
-                <button onclick="logoutAdmin()" class="bg-white/10 hover:bg-white/20 p-2 rounded-lg text-white">
-                    <span class="material-symbols-outlined text-sm">logout</span>
-                </button>
+                <h2 class="text-lg font-black text-blue-400 italic">MODERADOR</h2>
+                <button onclick="logoutAdmin()" class="bg-white/10 p-2 rounded-lg"><span class="material-symbols-outlined text-sm">logout</span></button>
             </div>
-            <div class="p-6 flex-1 overflow-y-auto bg-slate-950/50 text-center">
-                <div id="admin-pending-list" class="flex flex-wrap gap-2 mb-8 justify-center"></div>
-                <button onclick="saveChanges()" class="w-full py-5 bg-blue-600 text-white font-black rounded-2xl shadow-xl">Confirmar Pagos</button>
+            <div class="p-6 flex-1 overflow-y-auto bg-slate-950/50">
+                <div id="admin-pending-list" class="flex flex-wrap gap-2 mb-8"></div>
+                <button onclick="saveChanges()" class="w-full py-5 bg-blue-600 text-white font-black rounded-2xl">Confirmar Pago</button>
             </div>
         </div>
     </aside>
 </main>
 
+<!-- Modales y Notificaciones -->
 <div id="admin-modal" class="modal-overlay">
     <div class="glass-panel p-10 w-full max-w-sm mx-4 relative rounded-3xl border-2 border-primary/20">
-        <button onclick="closeModal()" class="absolute top-6 right-6 text-white/20 hover:text-white">
-            <span class="material-symbols-outlined">close</span>
-        </button>
-        <h3 class="text-2xl font-black mb-8 text-center italic">Acceso Privado</h3>
-        <input type="password" id="admin-code" placeholder="••••" class="w-full bg-black/50 border-2 border-white/10 rounded-2xl p-5 mb-4 text-center text-3xl font-black tracking-[0.5em] text-primary focus:border-primary focus:outline-none">
-        <button onclick="validateAdmin()" class="w-full bg-primary text-black font-black py-5 rounded-2xl">DESBLOQUEAR</button>
-        <p id="error-msg" class="text-red-500 font-bold text-[10px] mt-4 text-center hidden">Código Incorrecto</p>
+        <button onclick="closeModal()" class="absolute top-6 right-6 text-white/20 hover:text-white"><span class="material-symbols-outlined">close</span></button>
+        <h3 class="text-2xl font-black mb-8 text-center italic">Admin Access</h3>
+        <input type="password" id="admin-code" placeholder="••••" class="w-full bg-black/50 border-2 border-white/10 rounded-2xl p-5 mb-4 text-center text-3xl font-black tracking-[0.5em] text-primary">
+        <button onclick="validateAdmin()" class="w-full bg-primary text-black font-black py-5 rounded-2xl">ENTRAR</button>
+        <p id="error-msg" class="text-red-500 font-bold text-[10px] mt-4 text-center hidden">Clave Incorrecta</p>
     </div>
 </div>
 
@@ -307,13 +307,12 @@
     const PRECIO_UNIDAD = 8000;
     const ADMIN_PASS = "3227002789";
     const WHATSAPP_NUM = "3105720420";
-    const FECHA_RIFA = "19/12/2025";
-    const HORA_RIFA = "09:00 PM";
+    const FECHA_RIFA = "19 de Diciembre de 2025";
+    const HORA_RIFA = "9:00 PM";
     const LUGAR_RIFA = "Carrera 23C # 32A Sur 25 (Barrio Quiroga)";
     const TOTAL = 100;
 
-    let soldNumbers = [4, 7, 11, 13, 22, 25, 36, 44, 48, 52, 56, 69, 71, 78, 84, 88, 93, 99]; 
-    
+    let soldNumbers = [2, 12, 15, 24, 33, 45, 50, 67, 78, 88, 91, 99]; 
     let userSelected = [];
     let adminPending = [];
     let isAdmin = false;
@@ -333,7 +332,7 @@
     }
 
     function applyBtnStyles(btn, num) {
-        btn.className = 'rounded-lg flex items-center justify-center text-sm sm:text-lg font-black transition-all duration-300 h-full';
+        btn.className = 'rounded-lg flex items-center justify-center text-sm sm:text-lg font-black transition-all duration-300 h-full min-h-[40px]';
         if (soldNumbers.includes(num)) {
             btn.classList.add('grid-btn-sold');
         } else if (userSelected.includes(num)) {
@@ -371,18 +370,15 @@
         const totalPrice = document.getElementById('total-price');
 
         if (userSelected.length === 0) {
-            cartItems.innerHTML = `<div class="text-center py-20"><span class="material-symbols-outlined text-white/5 text-6xl mb-4">shopping_cart</span><p class="text-white/20 italic text-sm">Selecciona números del tablero</p></div>`;
+            cartItems.innerHTML = `<div class="text-center py-10"><span class="material-symbols-outlined text-white/5 text-5xl mb-4">shopping_cart</span><p class="text-white/20 italic text-sm">Selecciona números</p></div>`;
         } else {
             cartItems.innerHTML = userSelected.sort((a,b)=>a-b).map(n => `
-                <div class="bg-white/5 border border-white/10 rounded-2xl p-4 flex items-center justify-between group hover:border-primary transition-all">
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-4 flex items-center justify-between">
                     <div class="flex items-center gap-4">
-                        <div class="size-12 bg-primary text-black font-black rounded-xl flex items-center justify-center text-xl">${n.toString().padStart(2, '0')}</div>
-                        <div>
-                            <p class="text-xs font-black text-white italic">BOLETA #${n.toString().padStart(2, '0')}</p>
-                            <p class="text-[10px] text-primary font-bold tracking-widest">$${PRECIO_UNIDAD.toLocaleString()}</p>
-                        </div>
+                        <div class="size-10 bg-primary text-black font-black rounded-lg flex items-center justify-center">${n.toString().padStart(2, '0')}</div>
+                        <p class="text-xs font-black text-white italic">Boleta #${n}</p>
                     </div>
-                    <button onclick="handleNumberClick(${n})" class="text-white/10 hover:text-red-500 transition-colors p-2"><span class="material-symbols-outlined text-lg">delete</span></button>
+                    <button onclick="handleNumberClick(${n})" class="text-red-500/50 hover:text-red-500"><span class="material-symbols-outlined">delete</span></button>
                 </div>
             `).join('');
         }
@@ -395,87 +391,65 @@
         const numbersStr = userSelected.sort((a,b)=>a-b).map(n => n.toString().padStart(2, '0')).join(', ');
         const totalValue = (userSelected.length * PRECIO_UNIDAD).toLocaleString();
         
-        const message = `¡Hola! 👋 Me gustaría adquirir estas boletas para la Rifa Premium 2025:\n\n` +
+        const message = `¡Hola! 👋 Me gustaría comprar boletas para la Rifa del Pollo Relleno:\n\n` +
+                        `🍗 Pollo Relleno\n` +
                         `📅 Fecha: ${FECHA_RIFA}\n` +
                         `⏰ Hora: ${HORA_RIFA}\n` +
-                        `📍 Lugar: ${LUGAR_RIFA}\n` +
+                        `📍 Lugar: ${LUGAR_RIFA}\n\n` +
                         `🔢 Números: ${numbersStr}\n` +
-                        `💰 Total: $${totalValue} COP\n\n` +
-                        `Quedo atento(a) para confirmar el pago.`;
+                        `💰 Total: $${totalValue} COP`;
         
-        const encodedMsg = encodeURIComponent(message);
-        window.open(`https://wa.me/57${WHATSAPP_NUM}?text=${encodedMsg}`, '_blank');
+        window.open(`https://wa.me/57${WHATSAPP_NUM}?text=${encodeURIComponent(message)}`, '_blank');
     }
 
     function updateAdminView() {
         const list = document.getElementById('admin-pending-list');
-        list.innerHTML = adminPending.sort((a,b)=>a-b).map(n => `
-            <span class="bg-blue-600 text-white px-4 py-2 rounded-xl font-black text-sm border border-white/20">${n.toString().padStart(2, '0')}</span>
-        `).join('');
+        list.innerHTML = adminPending.sort((a,b)=>a-b).map(n => `<span class="bg-blue-600 px-3 py-1 rounded-lg font-black">${n}</span>`).join(' ');
     }
 
     function updateStats() {
         const soldCount = soldNumbers.length;
-        const availableCount = TOTAL - soldCount;
-        const percentage = (soldCount / TOTAL) * 100;
-
         document.getElementById('stat-sold').innerText = soldCount;
-        document.getElementById('stat-available').innerText = availableCount;
-        document.getElementById('stat-percentage').innerText = `${percentage.toFixed(0)}%`;
-
-        const progress = document.getElementById('progress-bar');
-        if(progress) progress.style.width = `${percentage}%`;
+        document.getElementById('stat-available').innerText = TOTAL - soldCount;
+        document.getElementById('stat-percentage').innerText = `${((soldCount / TOTAL) * 100).toFixed(0)}%`;
+        document.getElementById('progress-bar').style.width = `${(soldCount / TOTAL) * 100}%`;
     }
 
     function validateAdmin() {
-        const code = document.getElementById('admin-code').value.replace(/\s/g, '');
-        if (code === ADMIN_PASS) {
+        if (document.getElementById('admin-code').value === ADMIN_PASS) {
             isAdmin = true;
             document.getElementById('admin-badge').classList.remove('hidden');
-            document.getElementById('admin-badge').classList.add('flex');
             document.getElementById('user-cart-view').classList.add('hidden');
             document.getElementById('admin-controls-view').classList.remove('hidden');
             document.getElementById('admin-controls-view').classList.add('flex');
-            userSelected = [];
-            updateUserView();
             closeModal();
             initGrid();
-            document.getElementById('admin-code').value = '';
         } else {
-            const err = document.getElementById('error-msg');
-            err.classList.remove('hidden');
-            setTimeout(() => err.classList.add('hidden'), 2000);
+            document.getElementById('error-msg').classList.remove('hidden');
         }
     }
 
     function saveChanges() {
-        if (adminPending.length === 0) return;
         soldNumbers = [...new Set([...soldNumbers, ...adminPending])];
         adminPending = [];
         showToast();
-        updateAdminView();
         initGrid();
     }
 
     function logoutAdmin() {
         isAdmin = false;
-        adminPending = [];
         document.getElementById('admin-badge').classList.add('hidden');
         document.getElementById('admin-controls-view').classList.add('hidden');
         document.getElementById('user-cart-view').classList.remove('hidden');
         initGrid();
     }
 
-    function openAdminModal() { 
-        document.getElementById('admin-modal').style.display = 'flex'; 
-        document.getElementById('admin-code').focus();
-    }
+    function openAdminModal() { document.getElementById('admin-modal').style.display = 'flex'; }
     function closeModal() { document.getElementById('admin-modal').style.display = 'none'; }
-
     function showToast() {
         const t = document.getElementById('toast');
         t.style.opacity = '1';
-        setTimeout(() => t.style.opacity = '0', 3000);
+        setTimeout(() => t.style.opacity = '0', 2000);
     }
 
     window.onload = initGrid;
